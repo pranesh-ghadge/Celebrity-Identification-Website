@@ -1,3 +1,31 @@
+# from urllib import response
+# from flask import Flask, request, jsonify
+# from flask_cors import CORS, cross_origin
+# import util
+
+# app = Flask(__name__)
+
+# @app.route('/classify_image', methods=['GET', 'POST'])
+# CORS(app, support_credentials=True)
+# def classify_image():
+#     # image_data = request.data
+
+#     # print(image_data)
+
+#     # response = jsonify(util.classify_image(image_data))
+
+#     response = jsonify(lol="wow")
+
+#     response.headers.add('Access-Control-Allow-Origin', '*')
+
+#     return response
+
+
+# if __name__ == "__main__":
+#     print("Starting Python Flask Server For Sports Celebrity Image Classification")
+#     util.load_saved_artifacts()
+#     app.run(port=5000)
+
 from flask import Flask, request, jsonify
 import util
 

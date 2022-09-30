@@ -65,17 +65,17 @@ def get_cropped_image_if_2_eyes(image_path, image_base64_data):
     else:
         img = get_cv2_image_from_base64_string(image_base64_data)
 
-    if img is not None:
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-        cropped_faces = []
-        for (x,y,w,h) in faces:
-            roi_gray = gray[y:y+h, x:x+w]
-            roi_color = img[y:y+h, x:x+w]
-            eyes = eye_cascade.detectMultiScale(roi_gray)
-            if len(eyes) >= 2:
-                cropped_faces.append(roi_color)
-        return cropped_faces
+    # if img is not None:
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    cropped_faces = []
+    for (x,y,w,h) in faces:
+        roi_gray = gray[y:y+h, x:x+w]
+        roi_color = img[y:y+h, x:x+w]
+        eyes = eye_cascade.detectMultiScale(roi_gray)
+        if len(eyes) >= 2:
+            cropped_faces.append(roi_color)
+    return cropped_faces
 
 def get_b64_testimage_for_amit():
     with open("D:/Data Science Projects/Project 5/server/b642.txt") as f:

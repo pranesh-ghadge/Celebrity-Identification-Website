@@ -1,5 +1,9 @@
 .card-wrapper {
-    margin: 5% 0;
+    margin: 2% 0;
+    /* border: black solid 1px; */
+    padding-left: 0;
+    padding-right: 0;
+
 }
 
 /* You can adjust the image size by increasing/decreasing the width, height */
@@ -13,8 +17,19 @@
     object-fit: cover;
 }
 
+.card-body{
+    /* border: black solid 1px; */
+    padding-left: 0;
+    padding-right: 0;
+}
 .card-title {
     letter-spacing: 1.1px;
+    font-size: larger;
+    /* border: black solid 1px; */
+    /* padding-left: 0;
+    padding-right: 0; */
+    /* margin-left: 0;
+    margin-right: 0; */
 }
 
 .card-text {
